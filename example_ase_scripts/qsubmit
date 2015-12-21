@@ -1,0 +1,11 @@
+#!/bin/bash -f
+#$ -N neb_g32-H+H+ortho
+#$ -cwd
+#$ -j y
+#$ -o error.o
+#$ -S /bin/sh
+#$ -V
+#$ -l h=penrose
+
+python neb_read.py
+

@@ -1,0 +1,4 @@
+Scripts to run SIESTA in parallel with ASE on ROCKS cluster.
+
+Example folder includes example energy and NEB ASE scripts and SGE submission scripts
+utilizing the SIESTA calculator. 

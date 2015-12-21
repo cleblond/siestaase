@@ -1,0 +1,21 @@
+#!/bin/bash
+
+nnodes=8
+
+
+#sysnam=basename $PWD" 
+cwd=`pwd`
+   
+sysnam=$1
+sysnamout=${sysnam%.fdf}
+
+#JOB_ID=222
+
+
+
+#work but only serial on one node
+echo $sysnam
+
+qrsh -now no -l h=penrose -cwd -V -o siesta.o -e siesta.e -pe orte $nnodes mpirun -np $nnodes '/home/cleblond/siestaase/siesta_parallel < ' $1
+
+
